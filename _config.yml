@@ -4,3 +4,6 @@
 # which you are expected to set up once and rarely edit after that. If you find
 # yourself editing these this file very often, consider using Jekyll's data files
 # feature for the data you need to update frequently.
+
+sass:
+  sass_dir: _sass

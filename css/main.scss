@@ -2,87 +2,96 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC|Quicksand');
+$gold: rgb(210, 192, 69);
+$blue: rgb(20, 44, 145);
 
 body, html {
   width: 100%;
   height: 100%;
 }
 
-h1, h2, h3 {
-  font-family: 'Libre Baskerville', serif;
-}
-
-header {
+#img-background {
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  position: relative;
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  i {
-    position: relative;
-    color: white;
-  }
-
-  .fa {
-    animation: MoveUpDown 2s linear infinite;
-    position: absolute;
-    display: block;
-    font-size: 5em;
-    bottom: 40px;
-    text-align: center;
-    left: 50%;
-    right: 50%;
-  }
-
-  @keyframes MoveUpDown {
-  0% {
-    bottom: 0px;
-    animation-timing-function: ease-in;
-  }
-  50% {
-    bottom: 20px;
-    animation-timing-function: ease-out;
-  }
-  100% {
-    bottom: 0px;
-    animation-timing-function: ease-in;
-  }
+  position: fixed;
+  overflow:hidden;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  background-image: url("/images/back.jpg");
+  background-size: cover;
 }
 
-  .header-content {
-      position: absolute;
-      left: -400px;
-      width: 60%;
-      height: 100%;
-      background-color: rgba(20, 44, 145, 0.8);
-      color: white;
-      -ms-transform: skew(-30deg, 0deg);
-      -webkit-transform: skew(-30deg, 0deg);
-      transform: skew(-30deg, 0deg);
-      h2 {
-        position: absolute;
-        display: inline-block;
-        top: 500px;
-        left: 600px;
-        font-size: 30pt;
-        -ms-transform: skew(30deg, 0deg);
-        -webkit-transform: skew(30deg, 0deg);
-        transform: skew(30deg, 0deg);
-        span {
-          color: rgb(210, 192, 69)
+h1, h2, h3 {
+  font-family: 'Playfair Display SC', serif;
+}
+
+p, a, ul, li, ol {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2em
+}
+
+h2 {
+  margin-top: 40px;
+}
+
+h2::after {
+  content: ' ';
+  display: block;
+  margin: 20px auto 40px;
+  width: 50px;
+  height: 10px;
+  border-bottom: 3px solid $gold;
+  text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding:0;
+    margin: 20px 0;
+    li {
+        padding-left: 1em;
+        text-indent: -.7em;
+        &:before {
+            content: "• ";
+            color: $gold; /* or whatever color you prefer */
         }
-      }
+    }
+}
+
+.back-white {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+  padding: 60px 0px 80px;
+}
+
+section {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 500px;
+  background-color: rgba(54, 54, 54, 0.6);
+  color: white;
+  text-align: center;
+  padding-top: 180px;
+  h3 {
+    font-size: 2em;
   }
 }
 
-.main-content {
-  padding-top: 50px;
+footer {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  background-color: rgba(54, 54, 54, 0.6);
+  height: 400px;
+  color: white;
+  padding-top: 150px;
 }
+
+@import "cellphones";
+@import "laptops";
