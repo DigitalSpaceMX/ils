@@ -1,7 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    autoprefixer-rails (6.6.0)
+    addressable (2.4.0)
+    autoprefixer-rails (6.6.1)
       execjs
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
@@ -10,7 +11,8 @@ GEM
     execjs (2.7.0)
     ffi (1.9.14)
     forwardable-extended (2.6.0)
-    jekyll (3.2.1)
+    jekyll (3.3.1)
+      addressable (~> 2.4)
       colorator (~> 1.0)
       jekyll-sass-converter (~> 1.0)
       jekyll-watch (~> 1.1)
@@ -44,7 +46,10 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass
-  jekyll (= 3.2.1)
+  jekyll (= 3.3.1)
+
+RUBY VERSION
+   ruby 2.2.5p319
 
 BUNDLED WITH
-   1.11.2
+   1.13.7
