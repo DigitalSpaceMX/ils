@@ -26,13 +26,35 @@
 <body>
   <div id="img-background"></div>
   <header>
-    <img src="images/newyork.jpg" alt="New York" class="background" />
+    <img src="http://cdn.digitalspaceonline.com/ils/ils-logo.png" alt="Logo" class="logo" />
+    <div id="index-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="header-content">
+        <h1>PROTECTING AND GUIDING <span>YOUR</span> BUSINESS.</h1>
+      </div>
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#index-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#index-carousel" data-slide-to="1"></li>
+        <li data-target="#index-carousel" data-slide-to="2"></li>
+      </ol>
 
-    <div class="header-content">
-      <h1>PROTECTING AND GUIDING <span>YOUR</span> BUSINESS.</h1>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="http://cdn.digitalspaceonline.com/ils/newyork.jpg" alt="New York" />
+          <div class="carousel-caption">
+
+          </div>
+        </div>
+        <div class="item">
+          <img src="http://cdn.digitalspaceonline.com/ils/ferriviaria.jpg" alt="Train" />
+        </div>
+
+        <div class="item">
+          <img src="http://cdn.digitalspaceonline.com/ils/hammer.jpg" alt="Hammer" />
+        </div>
+      </div>
     </div>
-
-    <img src="images/ils-logo.png" alt="Logo" class="logo" />
   </header>
 
   <div class="back-white">
@@ -180,6 +202,7 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
       $(document).ready(function(){

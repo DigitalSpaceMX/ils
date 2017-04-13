@@ -3,43 +3,78 @@
 
   header {
     width: 100%;
-    height: 700px;
+    height: 100vh;
     overflow: hidden;
     position: relative;
 
-    img.background {
+    #index-carousel {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
+      z-index: 1;
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
+    .carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    } }
 
     img.logo {
       position: absolute;
       top: 30px;
       left: 50px;
+      z-index: 10;
+      width: 200px;
+      height: auto;
     }
 
     .header-content {
       position: absolute;
       left: -250px;
-      width: 800px;
+      width: 600px;
       height: 100%;
-      background-color: rgba(20, 44, 145, 0.8);
+      background-color: rgba(0, 0,0, 0.8);
       color: white;
       -ms-transform: skew(15deg, 0deg);
       -webkit-transform: skew(15deg, 0deg);
       transform: skew(15deg, 0deg);
       padding: 0 50px;
+      z-index: 5;
       h1 {
         position: absolute;
         display: inline-block;
         text-align: left;
-        bottom: 100px;
+        bottom: 80px;
         right: 10px;
 
-        font-size: 2.5em;
+        font-size: 2em;
         -ms-transform: skew(-15deg, 0deg);
         -webkit-transform: skew(-15deg, 0deg);
         transform: skew(-15deg, 0deg);
